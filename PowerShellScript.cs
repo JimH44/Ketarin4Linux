@@ -34,6 +34,8 @@ namespace Ketarin
                 // Output all information we can get.
                 powerShell.Streams.Debug.DataAdded += this.DebugDataAdded;
                 powerShell.Streams.Warning.DataAdded += this.WarningDataAdded;
+                // PowerShell is broken because Stream "Information" not supportable.
+                /*
                 try
                 {
                     powerShell.Streams.Information.DataAdded += this.InfoDataAdded;
@@ -42,6 +44,7 @@ namespace Ketarin
                 {
                     // Only supported in PS 5.0 and higher
                 }
+                */
 
                 Collection<PSObject> psOutput = powerShell.Invoke();
 
@@ -70,10 +73,13 @@ namespace Ketarin
             }
         }
 
+        // PowerShell is broken because Stream "Information" not supportable.
+        /*
         private void InfoDataAdded(object sender, DataAddedEventArgs e)
         {
             LogDialog.Log("PowerShell (info): " + ((PSDataCollection<InformationRecord>) sender)[e.Index].MessageData);
         }
+        */
 
         private void WarningDataAdded(object sender, DataAddedEventArgs e)
         {

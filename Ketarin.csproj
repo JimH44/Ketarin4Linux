@@ -92,7 +92,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Management.Automation, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.PowerShell.5.ReferenceAssemblies.1.0.0\lib\net4\System.Management.Automation.dll</HintPath>
       <Private>True</Private>
     </Reference>
@@ -182,7 +182,7 @@
       <Link>CDBurnerXP\Debug.cs</Link>
     </Compile>
     <Compile Include="CDBurnerXP\IO\FormatFileSize.cs">
-      <Link>CDBurnerXP\FormatFileSize.cs</Link>
+      <!--Link>CDBurnerXP\FormatFileSize.cs</Link-->
     </Compile>
     <Compile Include="CDBurnerXP\IO\PathEx.cs">
       <Link>CDBurnerXP\PathEx.cs</Link>

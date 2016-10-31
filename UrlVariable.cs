@@ -550,6 +550,11 @@ namespace Ketarin
             {
                 case "runpowershell":
                 case "ps":
+                    // PowerShell is broken because Stream "Information" not supportable.
+                    LogDialog.Log(context, "PowerShell commands not supported at present.");
+                    return string.Empty;
+
+                    /*
                     try
                     {
                         if (context != null && !context.CanBeShared)
@@ -566,6 +571,7 @@ namespace Ketarin
                     {
                         return string.Empty;
                     }
+                    */
 
                 case "empty":
                     // Useful, if you want to load, but not use a variable
